@@ -1,0 +1,12 @@
+[package]
+name = "fastformat"
+version = "0.1.0"
+authors = ["Svend Tofte <stofte@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+json = "*"
+
+[lib]
+name = "fastformat"
+crate-type = ["cdylib"]
