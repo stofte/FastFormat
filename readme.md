@@ -3,9 +3,8 @@ Fast Format for Sublime Text
 
 A project for playing around with Python to Rust interop in the context of
 Sublime Text. `Fast Format` a simple package for formatting JSON which uses
-a rust to do the heavy lifting.
+rust to do the heavy lifting.
 
-Tested on Windows 10 using Sublime Text 3.
 
 Usage:
 
@@ -14,9 +13,20 @@ Usage:
 
 The package adds the `Fast Format` command to the command palette (Ctrl+Shift+P).
 
-TODOs
------
+Performance
+-----------
 
- - Create ome measurements to compare
+Tested on a single-line JSON file, formatting was averaged over 5 runs after an initial warm-up. Platforms were Windows 10 and ST 3.
+
+|                     | 5MB       | 15MB      
+|---------------------|-----------|-----------
+| [JSON Reindent](https://github.com/ThomasKliszowski/json_reindent) | 24.2 sec | 72.4 sec
+| [JSTool (Notepad++) ](https://github.com/sunjw/jstoolnpp) | 0.87 sec | 2,69 sec
+| Fast Format         | 0.95 sec  | 2.88 sec
+
+
+TODO
+----
+
  - Support XML?
  - Allow looser JSON parsing (bare keys, etc)?
