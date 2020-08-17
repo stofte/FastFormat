@@ -6,6 +6,7 @@ edition = "2018"
 
 [dependencies]
 json = "*"
+quick-xml = "*"
 
 [lib]
 name = "fastformat"
